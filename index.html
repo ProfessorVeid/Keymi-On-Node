@@ -1,8 +1,229 @@
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>test</p>
-  </body>
-</html>
+
+      <html>
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+          <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="form.css">
+          <link rel="stylesheet" href="prices.css">
+        </head>
+        <body>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0&appId=142117212116406"></script>
+          <a href="#main" class="skip-link">Skip to main content</a>
+          <header>
+            <div class="container">
+              <h1>Keymi</h1>
+              <h2>Your key, your link, your story</h2>
+              <a href="#contact" class="link-github"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+                  </svg>
+                </span>
+                ORDER NOW</a>
+            </div>
+            <br>
+            <br>
+            <nav>
+              <ul>
+                <li><a href="#guide">Guide</a></li>
+                <li><a href="#sol">Confession</a></li>
+                <li><a href="#services">Products</a></li>
+                <li><a href="#files">Order</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61573048131824">Facebook</a></li>
+              </ul>
+            </nav>
+          </header>
+          </main>
+          <main id="main" tabIndex="1" id="sol">
+            <div class="container" id="sol">
+              <article id="about">
+                  </p>
+                <section class="container">
+                  <h2>SAY OUT LOUD!</h2>
+                  <blockquote>
+                    <p>
+                      <strong>PREMIUM:</strong> 
+                      <a>Ewan ko kung para saan to, pero sige ilalagay ko. Anyways, sharawt sainyong lahat bili na kayo products namin</a> 
+                    </p>
+                  </blockquote>
+                  <ul>
+                    <li>Hi Harold</li>
+                    <li>Hi Rey</li>
+                    <li>Hi Gab</li>
+                    <li>Hello Sainyo</li>
+                    <li>Shawart</li>
+                    <li>Hi Harold</li>
+                    <li>Hi Rey</li>
+                    <li>Hi Gab</li>
+                    <li>Hello Sainyo</li>
+                    <li>Shawart</li>
+                    <li>Hi Harold</li>
+                    <li>Hi Rey</li>
+                    <li>Hi Gab</li>
+                    <li>Hello Sainyo</li>
+                    <li>Shawart</li>
+                    <li>Testing lang po ito</li>
+                    <li>Anong tawag sa key- huwag na pala</li>
+                  </ul>
+                </section>
+                <center>
+                  <form id="confessionForm" action="https://formspree.io/f/mnnjzgnq" method="POST">
+                    <textarea name="confession" placeholder="Input your message, it will appear in the bubble chat section after reviewing." rows="4" required></textarea>
+                    <button class="btnWrpY" type="submit">Confess</button>
+                  </form>
+
+                  <p id="confessionResponseMessage" class="txtWrpZ" style="color: green;"></p>
+                    <p id="responseMessage" class="txtWrpZ" style="color: green;"></p>
+                </div>
+              </article>
+              <main id="main" tabIndex="-1" id="guide">
+                <article id="order-keymi" id="guide">
+                  <section class="container" id="guide">
+                    <h3>Steps on how to order!</h3>
+                    <ol>
+                      <li>
+                        Find your <a href="#">product</a>, make sure to take note which set it is
+                      </li>
+                      <li>
+                        After finding your product, proceed to the <a href="#">order</a> section.
+                      </li>
+                    </ol>
+                  </section>
+                  <footer id="files">
+                    <div class="container">
+                    </div>
+                  </footer>
+                </article>
+              </div>
+          <article id="contact">
+            <aside id="styles">
+              <div class="boxWrpX">
+                  <h2>Order Now</h2>
+            <form id="orderForm" action="https://formspree.io/f/xnnjzbod" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+
+          <select name="product" required>
+              <option value="Set 1">Set 1</option>
+              <option value="Set 2">Set 2</option>
+              <option value="Set 3">Set 3</option>
+              <option value="Set 4">Set 4</option>
+              <option value="Set 5">Set 5</option>
+              <option value="Set 6">Set 6</option>
+          </select>
+
+          <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+
+          <!-- New File Upload Link Field -->
+          <input type="url" name="file_link" placeholder="Paste file link (Google Drive, Dropbox, etc.)">
+
+          <button class="btnWrpY" type="submit">Send via Email</button>
+      </form>
+
+      <p id="orderResponseMessage" class="txtWrpZ" style="color: green;"></p>
+
+      <script>
+          document.getElementById('orderForm').addEventListener('submit', async function(event) {
+              event.preventDefault();
+
+              const formData = new FormData(this);
+              const response = await fetch(this.action, {
+                  method: "POST",
+                  body: formData,
+                  headers: { 'Accept': 'application/json' }
+              });
+
+              if (response.ok) {
+                  document.getElementById('orderResponseMessage').textContent = "Order placed successfully!";
+                  this.reset();
+              } else {
+                  document.getElementById('orderResponseMessage').textContent = "Something went wrong. Please try again.";
+              }
+          });
+      </script>
+
+                  </li>
+                </ul>
+
+              </div>
+            </aside>
+            </article>
+          <section class="service-cards" id="services">
+            <h3>Our Keychain Products</h3>
+            <p class="section-lead">If you have any question or inquiry kindly contact us!</p>
+            <div class="services-grid">
+              <div class="service service1">
+                <i class="ti-bar-chart"></i>
+                <h4>SET 1</h4>
+                <p>Back-to-Back Picture</p>
+                <p>Feature your most cherished photos.  </p>
+                <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+              </div>
+
+              <div class="service service2">
+                <i class="ti-light-bulb"></i>
+                <h4>SET 2</h4>
+                <p>Back-to-Back Spotify Scannable</p>
+                <p>Scan and listen to your favorite song anytime, anywhere!</p>
+                <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+                </div>
+
+              <div class="service service3">
+                <i class="ti-money"></i>
+                <h4>SET 3</h4>
+                <p>Picture + QR to Social Media</p>
+                <p>Share your socials instantly with a quick scan.  </p>
+                <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+                </div>
+            </div>
+            <section class="service-cards">
+              <div class="services-grid">
+                <div class="service service1">
+                  <i class="ti-bar-chart"></i>
+                  <h4>SET 4</h4>
+                  <p>Picture + QR to Website (Collage)</p>
+                  <p>Keep multiple photos in one place and access them with a single scan.</p>
+                  <bR>
+                </bR>
+                  <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+                  </div>
+
+                <div class="service service2">
+                  <i class="ti-light-bulb"></i>
+                  <h4>SET 5</h4>
+                  <p>Special Picture + QR to Website (Collage + Message)</p>
+                  <p>A personalized keychain with a heartfelt message alongside your collage.  </p>
+                  <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+                  </div>
+                <div class="service service3">
+                  <i class="ti-money"></i>
+                  <h4>SET 6</h4>
+                  <p>Special Picture + QR to Website (Collage + Message)</p>
+                  <p>Freedom of putting whatever you like in the keychain</p>
+                  <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+                  </div>
+              </div>
+          </section>
+            
+            <script>
+                document.getElementById('confessionForm').addEventListener('submit', async function(event) {
+                    event.preventDefault();
+
+                    const formData = new FormData(this);
+                    const response = await fetch(this.action, {
+                        method: "POST",
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        document.getElementById('confessionResponseMessage').textContent = "Your confession has been submitted successfully!";
+                        this.reset();
+                    } else {
+                        document.getElementById('confessionResponseMessage').textContent = "Something went wrong. Please try again.";
+                    }
+                });
+            </script>
+
+
+        </body>
+      </html>
